@@ -11,6 +11,7 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
     const onSubmit = ( ev) => {
+        console.log('Prueba de onSubmit')
         ev.preventDefault()
         if ( inputValue.trim().length <= 1 ) return;
         //setCategories( categories => [ inputValue, ...categories ]  )
@@ -20,7 +21,7 @@ export const AddCategory = ({ onNewCategory }) => {
 
 
   return (
-    <form onSubmit={ onSubmit }>
+    <form onSubmit={ onSubmit } aria-label='form' >
         <input 
             type="text" 
             placeholder='Buscar Gifs'
